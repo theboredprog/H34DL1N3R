@@ -1,4 +1,4 @@
-# H3ADL1N3R — Multi-Source Python RSS News Headline Scraper
+# H3ADL1N3R
 
 **H3ADL1N3R** is a reliable and user-friendly Python tool that aggregates the latest top headlines from multiple major news outlets across the UK, USA, and Italy using their official RSS feeds.
 
