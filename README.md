@@ -12,7 +12,7 @@ For educational and ethical use only.
 
 ## Features
 
-- Aggregates top headlines from 13+ reputable news sources spanning UK, US, and Italy  
+- Aggregates top headlines from 9+ reputable news sources spanning UK, US, and Italy  
 - Supports filtering by news source(s) via command-line arguments  
 - Clean, readable terminal output with color and tables using the `rich` library  
 - Fetches headline title, publication date, and direct article link  
