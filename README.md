@@ -29,6 +29,7 @@ Install dependencies with:
 
 ```bash
 pip3 install -r requirements.txt
+```
 
 ## Usage
 
@@ -36,17 +37,19 @@ Run the scraper without arguments to fetch headlines from all sources with the d
 
 ```bash
 python3 headliner.py
+```
 
 Or specify one or more sources by their keys and optionally set how many headlines to fetch per source:
 
 ```bash
 python3 headliner.py --source cnn fox ansa --count 10
+```
 
 ## Available news source keys
 
-- UK: bbc
-- USA: nyt, fox, breitbart, npr
-- ITALY: ansa, corriere, repubblica, la stampa, tgcom24
+- UK: `bbc`
+- USA: `nyt`, `fox`, `breitbart`, `npr`
+- ITALY: `ansa`, `corriere`, `repubblica`, `la stampa`, `tgcom24`
 
 ## Legal and ethical notice
 
