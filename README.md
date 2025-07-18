@@ -5,9 +5,10 @@ It supports translation, summary previews, and region-based filtering — making
 For educational and ethical use only.
 
 ![Demo screenshot 1](img1.png)  
+
 ![Demo screenshot 2](img2.png)
 
-## 🚀 Features
+## Features
 
 - Aggregates headlines from 25+ reliable outlets across:
 - UK, USA, Italy, France, Germany, Poland, Hungary
@@ -21,7 +22,7 @@ For educational and ethical use only.
 
 ---
 
-## 📦 Requirements
+## Requirements
 
 - Python 3.7+
 - Python packages:
@@ -45,19 +46,19 @@ deep-translator
 
 ## 🛠️ Usage
 
-### 🔹 Basic: fetch from all sources (5 headlines each)
+### Basic: fetch from all sources (5 headlines each)
 
 ```bash
 python headliner.py
 ```
 
-### 🔹 Custom sources & headline count
+### Custom sources & headline count
 
 ```bash
 python headliner.py --source fox ansa clarin --count 10
 ```
 
-### 🔹 Translate results
+### Translate results
 
 ```bash
 python headliner.py --lang it
@@ -69,7 +70,7 @@ Or combine:
 python headliner.py -s guardian nyt france24 -c 3 -l fr
 ```
 
-## 🗂️ Available source keys
+## Available source keys
 
 ### 🇬🇧 United Kingdom  
 `bbc`, `telegraph`, `daily_mail`, `independent`, `guardian`, `new_statesman`
