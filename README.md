@@ -1,54 +1,113 @@
-# H3ADL1N3R — Multi-Source Python RSS News Headline Scraper
+**H3ADL1N3R** is a powerful, terminal-based Python tool that fetches and displays the latest headlines from a broad range of international news sources using official RSS feeds.
 
-**H3ADL1N3R** is a reliable and user-friendly Python tool that aggregates the latest top headlines from multiple major news outlets across the UK, USA, and Italy using their official RSS feeds.
-
-Designed for beginners and professionals alike, it leverages structured data feeds to deliver unbiased, diverse perspectives on current events while avoiding fragile HTML scraping techniques.
+It supports translation, summary previews, and region-based filtering — making it a flexible and fast solution to monitor news narratives across political spectrums and countries.
 
 For educational and ethical use only.
 
-![Demo screenshot 1](img1.png)
-
+![Demo screenshot 1](img1.png)  
 ![Demo screenshot 2](img2.png)
 
-## Features
+## 🚀 Features
 
-- Aggregates top headlines from 13+ reputable news sources spanning UK, US, and Italy  
-- Supports filtering by news source(s) via command-line arguments  
-- Clean, readable terminal output with color and tables using the `rich` library  
-- Fetches headline title, publication date, and direct article link  
-- Lightweight, stable, and easy to extend
+- Aggregates headlines from 25+ reliable outlets across:
+- UK, USA, Italy, France, Germany, Poland, Hungary
+- China, Japan
+- Brazil, Argentina
+- Filter by one or more sources (e.g. just Italian or Left-leaning US news)
+- Auto-generates summaries using the feed's metadata
+- Translate headlines and summaries into any language (e.g., `it`, `es`, `fr`, `ru`)
+- Elegant output using `rich` with color, tables, and hyperlinks
+- Easy to extend and maintain (no HTML scraping, pure RSS)
 
-## Requirements
+---
 
-- Python 3.6 or higher  
-- Python packages:  
-  - `feedparser` (for parsing RSS feeds)  
-  - `rich` (for enhanced terminal output)  
+## 📦 Requirements
 
-Install dependencies with:
+- Python 3.7+
+- Python packages:
+  - `feedparser` – RSS parsing
+  - `rich` – terminal display
+  - `deep-translator` – optional translation
 
-```bash
-pip3 install -r requirements.txt
-
-## Usage
-
-Run the scraper without arguments to fetch headlines from all sources with the default 5 headlines each:
-
-```bash
-python3 headliner.py
-
-Or specify one or more sources by their keys and optionally set how many headlines to fetch per source:
+Install everything with:
 
 ```bash
-python3 headliner.py --source cnn fox ansa --count 10
+pip install -r requirements.txt
+```
 
-## Available news source keys
+Your `requirements.txt` should contain:
 
-- UK: bbc
-- USA: nyt, fox, breitbart, npr
-- ITALY: ansa, corriere, repubblica, la stampa, tgcom24
+```text
+feedparser
+rich
+deep-translator
+```
 
-## Legal and ethical notice
+## 🛠️ Usage
 
-This tool is intended solely for educational purposes. 
-Always respect website terms of service and robots.txt directives. Avoid excessive or abusive requests to news servers.
+### 🔹 Basic: fetch from all sources (5 headlines each)
+
+```bash
+python headliner.py
+```
+
+### 🔹 Custom sources & headline count
+
+```bash
+python headliner.py --source fox ansa clarin --count 10
+```
+
+### 🔹 Translate results
+
+```bash
+python headliner.py --lang it
+```
+
+Or combine:
+
+```bash
+python headliner.py -s guardian nyt france24 -c 3 -l fr
+```
+
+## 🗂️ Available source keys
+
+### 🇬🇧 United Kingdom  
+`bbc`, `telegraph`, `daily_mail`, `independent`, `guardian`, `new_statesman`
+
+### 🇺🇸 United States  
+`nyt`, `fox`, `breitbart`, `npr`, `wash_ex`, `national_review`, `mother_jones`, `the_intercept`, `msnbc`
+
+### 🇮🇹 Italy  
+`ansa`, `corriere`, `repubblica`, `la_stampa`, `tgcom24`
+
+### 🇫🇷 France  
+`france24`, `le_monde`
+
+### 🇩🇪 Germany  
+`dw`, `faz`
+
+### 🇵🇱 Poland  
+`tvn24`, `gazeta`
+
+### 🇭🇺 Hungary  
+`hungary_today`
+
+### 🇨🇳 China  
+`xinhuanet`
+
+### 🇯🇵 Japan  
+`japan_times`, `nhk`
+
+### 🇧🇷 Brazil  
+`folha`, `globo`
+
+### 🇦🇷 Argentina  
+`clarin`
+
+## ⚖️ Legal & Ethical Notice
+
+This tool is intended strictly for **personal educational use**.
+
+- Always respect the [Terms of Service](https://www.nytimes.com/content/help/rights/terms/terms-of-service.html) and `robots.txt` of any website you query.
+- Do not run this tool too frequently or in parallel.
+- Use it to gain insight — not to republish or redistribute content.
