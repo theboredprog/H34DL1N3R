@@ -82,7 +82,6 @@ def get_headlines_from_feeds(selected_sources, count, lang=None):
         table.add_column("Title", style="bold cyan")
         table.add_column("Summary", style="white")
         table.add_column("Published", style="dim")
-        table.add_column("Link", style="blue underline")
 
         for i, entry in enumerate(feed.entries[:count], 1):
             title = entry.get('title', 'N/A')
@@ -93,7 +92,8 @@ def get_headlines_from_feeds(selected_sources, count, lang=None):
                 summary = translate_text(summary, lang)
 
             published = entry.get('published', 'N/A')
-            table.add_row(str(i), title, summary, published, entry.link)
+            table.add_row(str(i), title, summary, published)
+            table.add_row("", "", "", "")  # Empty row as separator
 
         console.print(table)
         console.print("\n")
